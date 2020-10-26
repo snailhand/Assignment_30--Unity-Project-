@@ -7,6 +7,7 @@ using UnityEngine;
 public class MovePositiveZ : MonoBehaviour
 {
     float forwardSpeed = 10.0f;
+    public float shoot = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -30,4 +31,10 @@ public class MovePositiveZ : MonoBehaviour
         //make it rotate
         transform.Rotate(Vector3.forward, forwardSpeed * Time.deltaTime * 10);
     }
+
+    public void Shoot1()
+    {
+        //transform.position = new Vector3(transform.position.)
+    }
+
 }
