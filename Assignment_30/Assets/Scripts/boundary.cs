@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class boundary : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,7 @@ public class boundary : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
        
     }
     private void OnTriggerExit(Collider other)
@@ -21,9 +24,15 @@ public class boundary : MonoBehaviour
         /*
             if (other.gameObject.CompareTag("Player"))
             {
-            Destroy(other.gameObject);
+             //Destroy(other.gameObject);
+             //transform.position
+             
             }       
+<<<<<<< HEAD
         */
+=======
+           
+>>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
     }
 
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
@@ -8,7 +8,9 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    float speed = 10.0f;
+    //Global Variables      
+
+    float speed = 14.0f;
     float jumpheight = 15.0f;
     float djumpheight = 15.0f;
     float zLimit = 6.5f;
@@ -17,7 +19,9 @@ public class PlayerController : MonoBehaviour
     bool isOnGround = true;
     float jumptimes = 0f;
     float jumpcount = 0f;
+    float fire = 0f;
 
+        
     Rigidbody playerRb;   //referencing 
 
     // Start is called before the first frame update
@@ -29,30 +33,34 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
         //Declare and Initialize variables to reference to User Interaction Inputs
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
         float jumpInput = Input.GetAxis("Jump");
+        float fireInput = Input.GetAxis("Fire1");
 
         //Keybind Controls (GameObject) 
         transform.Translate(Vector3.forward * Time.deltaTime * verticalInput * speed);
         transform.Translate(Vector3.right * Time.deltaTime * horizontalInput * speed);
 
+      
 
         PlayerJump();
-        
+
 
         //Setting Boundaries within the plane
-        /*
+        
         //front and back
         if (transform.position.z < -zLimit)
         {
+            print("Has reached reverse boundary limit");
             transform.position = new Vector3(transform.position.x, transform.position.y, -zLimit);
         }
         else if (transform.position.z > zLimit)
-        { 
+        {
+            print("Has reached forward boundary limit");
             transform.position = new Vector3(transform.position.x, transform.position.y, zLimit);
         }
 
@@ -60,13 +68,17 @@ public class PlayerController : MonoBehaviour
         //left and right
         if (transform.position.x < -xLimit)
         {
+            print("Has reached left boundary limit");
             transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
         }
         else if (transform.position.x > xLimit)
         {
+            print("Has reached right boundary limit");
             transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
         }
-        */
+       
+        
+
     }
 
     //Method Call from UnityEngine (Triggers when Object collides with ground)
@@ -109,4 +121,19 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+    
+    //Player Shooting Method
+    public void PlayerShoot()
+    {
+        GameObject Player = GameObject.Find("Player");
+        MovePositiveZ movePositiveZ = Player.GetComponent<MovePositiveZ>();
+        movePositiveZ.Shoot1();
+
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) && movePositiveZ.shoot == 0)
+        {
+            
+        }
+    }
+    
 }
