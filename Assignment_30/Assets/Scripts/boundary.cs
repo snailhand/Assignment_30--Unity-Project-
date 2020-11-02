@@ -18,10 +18,12 @@ public class boundary : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        /*
             if (other.gameObject.CompareTag("Player"))
             {
             Destroy(other.gameObject);
             }       
+        */
     }
 
 }
