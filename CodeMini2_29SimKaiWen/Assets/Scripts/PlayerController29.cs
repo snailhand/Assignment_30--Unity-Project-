@@ -15,17 +15,19 @@ public class PlayerController29 : MonoBehaviour
     bool ridingCube = false;
     float jumpCount = 0;
 
-    //referencing 
+    //declaration
+
     Rigidbody playerRb;   
     public GameObject MoveCube;
     
     // Start is called before the first frame update
     void Start()
     {
-        //rigidbody link
+        //rigidbody referencing 
 
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityMod;
+
     }
 
     // Update is called once per frame
@@ -35,15 +37,15 @@ public class PlayerController29 : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        //Keybind Controls (GameObject) 
+        //Keybind Controls (for player) 
         transform.Translate(Vector3.forward * Time.deltaTime * horizontalInput * speed);
         transform.Translate(Vector3.left * Time.deltaTime * verticalInput * speed);
 
         PlayerJump();
       
 
-        //Setting Boundaries within the plane
-
+        //Setting Boundaries within the plane:
+        
         //front and back
         if (transform.position.z < -9)
         {
@@ -64,7 +66,8 @@ public class PlayerController29 : MonoBehaviour
         {
             transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
         }
-
+        
+    
 
     }
 
@@ -73,19 +76,22 @@ public class PlayerController29 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            //When in collision with the ground
             isOnGround = true;
             jumpCount = 0;
         }
         if (collision.gameObject.CompareTag("MoveCube"))
         {
+            //When in collision with the moving cube
             ridingCube = true;
             jumpCount = 0;
         }
+
     }
 
     void PlayerJump()
     {
-        if (isOnGround || ridingCube && jumpCount == 0)
+        if (isOnGround = true || ridingCube && jumpCount == 0)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -95,6 +101,8 @@ public class PlayerController29 : MonoBehaviour
                 jumpCount += 1;
 
             }
+
+
 
         }
     }
