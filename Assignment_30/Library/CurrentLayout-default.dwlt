@@ -146,11 +146,15 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   controlID: 94
 =======
   controlID: 137
 >>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
+=======
+  controlID: 79
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -339,6 +343,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       m_SelectedIDs: cc330000
       m_LastClickedID: 13260
@@ -348,6 +353,11 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: a8faffff
 >>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
+=======
+      m_SelectedIDs: 9c2e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 6afbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,6 +469,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_SelectedIDs: 40340000
     m_LastClickedID: 13376
@@ -468,6 +479,11 @@ MonoBehaviour:
     m_LastClickedID: 13430
     m_ExpandedIDs: 000000006c34000000ca9a3b
 >>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
+=======
+    m_SelectedIDs: 38340000
+    m_LastClickedID: 13368
+    m_ExpandedIDs: 000000002e34000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -495,11 +511,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     m_ExpandedIDs: 000000003a340000
 =======
     m_ExpandedIDs: 000000006c340000
 >>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
+=======
+    m_ExpandedIDs: 000000002e340000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,8 +764,12 @@ MonoBehaviour:
 =======
     m_Target: {x: 0.09160565, y: -0.4405549, z: 0.045168053, w: 0.89195263}
     speed: 2
+<<<<<<< Updated upstream
     m_Value: {x: 0.091601074, y: -0.4405329, z: 0.045165796, w: 0.8919081}
 >>>>>>> 729016a058b2a7d60355a98fae9b58ea448c77ae
+=======
+    m_Value: {x: -0.09160565, y: 0.4405549, z: -0.045168053, w: -0.8919526}
+>>>>>>> Stashed changes
   m_Size:
     m_Target: 6.9040213
     speed: 2
